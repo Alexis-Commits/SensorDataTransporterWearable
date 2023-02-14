@@ -77,7 +77,7 @@ sensorDataTransporter.unRegisterBroadcastReceiver()
 
  - The `smartwatch` app and the `handheld` app must have the same `package` name and must be signed with the same `keystore`
 
-- You have to add this service inside <application> .. </application> tag
+- You have to add this service inside `<application> .. </application>` tag
 
 ```xml
       <service
