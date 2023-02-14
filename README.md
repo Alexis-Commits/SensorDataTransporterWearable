@@ -23,7 +23,7 @@ val sensorDataTransporter = SensorDataTransporterWearable(applicationContext)
 #### StepCounter
 
 
-```
+```Kotlin
 sensorDataTransporter.initStepCounterSensor()
 ```
 ***
@@ -33,7 +33,7 @@ sensorDataTransporter.initStepCounterSensor()
 #### HeartRate
 
 
-```
+```kotlin
 sensorDataTransporter.initHeartRateSensor()
 ```
 
@@ -43,7 +43,7 @@ sensorDataTransporter.initHeartRateSensor()
 #### Gyroscope
 
 
-```
+```kotlin
 sensorDataTransporter.initGyroscopeSensor()
 ```
 
@@ -53,21 +53,21 @@ sensorDataTransporter.initGyroscopeSensor()
 #### Accelerometer
 
 
-```
+```kotlin
 sensorDataTransporter.initAccelerometerSensor()
 ```
 ***
 
 #### Then to make the library able to receive the sensor data use
 
-```
-    sensorDataTransporter.registerBroadcastReceiver()
+```kotlin
+sensorDataTransporter.registerBroadcastReceiver()
 ```
 
 #### And to disable it
 
-```
-    sensorDataTransporter.unRegisterBroadcastReceiver()
+```kotlin
+sensorDataTransporter.unRegisterBroadcastReceiver()
 ```
 
 
@@ -79,7 +79,7 @@ sensorDataTransporter.initAccelerometerSensor()
 
 - You have to add this service inside <application> .. </application> tag
 
-```
+```xml
       <service
             android:name="com.damnluck.sensordatatransporterwearable.core.MessageReceiverWear"
             android:enabled="true"
@@ -100,7 +100,7 @@ sensorDataTransporter.initAccelerometerSensor()
 
 - Also, you have add important dependencies in your gradle file
 
-```
+```groovy
     implementation 'com.google.android.gms:play-services-wearable:17.1.0'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
 
